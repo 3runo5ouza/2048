@@ -1,3 +1,4 @@
+var mostrarNumeros = false;
 function HTMLActuator() {
   this.tileContainer    = document.querySelector(".tile-container");
   this.scoreContainer   = document.querySelector(".score-container");
@@ -62,7 +63,8 @@ HTMLActuator.prototype.addTile = function (tile) {
   this.applyClasses(wrapper, classes);
 
   inner.classList.add("tile-inner");
-  inner.textContent = tile.value;
+  if(mostrarNumeros)
+    inner.textContent = tile.value;// bruno esteve aqui
 
   if (tile.previousPosition) {
     // Make sure that the tile gets rendered in the previous position first

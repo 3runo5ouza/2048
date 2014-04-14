@@ -29,6 +29,14 @@
     <div class="above-game">
       <p class="game-intro">Join the numbers and get to the <strong>2048 tile!</strong></p>
       <a class="restart-button">New Game</a>
+
+<a class="restart-button" onclick="function exibir(){
+        //var inner = document.getElementsByClassName('tile-inner');
+        mostrarNumeros=true;
+        inner.textContent = tile.value;
+        location.reload();
+      }
+      exibir();">Mostrar n&uacute;meros</a>
     </div>
 
     <div class="game-container">
@@ -66,7 +74,6 @@
           <div class="grid-cell"></div>
         </div>
       </div>
-
       <div class="tile-container">
 
       </div>
